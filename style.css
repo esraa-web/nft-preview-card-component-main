@@ -1,0 +1,165 @@
+:root {
+    /* colors */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: rgb(0, 255, 247);
+    /* (main BG) */
+    --very-dark-blue-main: hsl(217, 54%, 11%);
+    /* (card BG) */
+    --Very-dark-blue-card: hsl(216, 50%, 16%);
+    /* (line) */
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Font */
+    --fs-paragraph: 18px;
+    --ff-Outfit: 'Outfit', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1440px;
+    height: 100vh;
+    background: var(--very-dark-blue-main);
+    font-family: var(--ff-Outfit);
+}
+
+.container {
+    width: 25%;
+    margin: 60px auto 30px auto;
+    color: var(--white);
+    padding: 25px;
+    border-radius: 15px;
+    background: var(--Very-dark-blue-card);
+    max-height: 100vh;
+    
+}
+
+.card-img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    background-image: url(./images/image-equilibrium.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.card-img:hover {
+    background-color: rgba(0, 255, 247, 0.7);
+    background-image: url(./images/image-equilibrium.jpg), url(/images/icon-view.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain, auto;
+    background-blend-mode: lighten;
+    cursor: pointer;
+
+}
+
+h2 {
+    padding: 20px 0;
+}
+
+h2:hover,
+span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+p {
+    color: var(--soft-blue);
+    font-size: var(--fs-paragraph);
+    padding-bottom: 20px;
+    padding-right: 30px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon {
+    margin-right: 4px;
+}
+
+.ethereum {
+    color: var(--cyan);
+
+}
+
+.line {
+    color: var(--very-dark-blue-line);
+}
+
+.creator {
+    display: flex;
+    justify-content: start;
+    align-items: end;
+
+}
+
+.creator img {
+    width: 40px;
+    padding: 1px;
+    background-color: var(--white);
+    border-radius: 50%;
+}
+
+.name {
+    padding: 25px 0 10px 15px;
+
+}
+
+span {
+    color: var(--white);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--white);
+ 
+}
+
+.attribution a {
+    color: var(--white);
+}
+@media (max-width:1024px) {
+    .container {
+        width:35%;
+     
+    }
+}
+@media (max-width:688px) {
+    .container {
+        width:50%;
+     
+    }
+}
+@media (max-width:420px) {
+    .container {
+        width:85%;
+     
+    }
+    .card-img {
+        width: 100%;
+        height: 290px;
+    }   
+}
+@media (max-width:378px) {
+    .container {
+        width:90%;
+     
+    }
+    .card-img {
+      
+        height: 280px;
+    }   
+    p{
+        font-size: 16px;
+    }
+}
